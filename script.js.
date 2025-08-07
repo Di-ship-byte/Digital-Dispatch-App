@@ -1,0 +1,58 @@
+// A simple array of story objects
+const stories = [
+    {
+        id: 1,
+        title: "The Rise of AI in Journalism",
+        author: "Jane Doe",
+        date: "August 1, 2024",
+        excerpt: "Artificial intelligence is beginning to revolutionize the way news is gathered, written, and distributed...",
+        content: "Artificial intelligence is beginning to revolutionize the way news is gathered, written, and distributed. From automated fact-checking to generating basic news reports, AI tools are becoming increasingly integrated into newsrooms worldwide. This shift raises questions about the future of human journalists, but also opens up new possibilities for in-depth reporting and personalized news delivery.",
+        image: "https://via.placeholder.com/400x200" // Placeholder image URL
+    },
+    {
+        id: 2,
+        title: "New Study Reveals Impact of Climate Change on Coastal Cities",
+        author: "John Smith",
+        date: "July 28, 2024",
+        excerpt: "A recent study highlights the growing threat of rising sea levels and extreme weather events to major coastal population centers...",
+        content: "A recent study highlights the growing threat of rising sea levels and extreme weather events to major coastal population centers. Scientists from the Global Climate Institute have published alarming data, suggesting that without significant intervention, many cities could face irreversible damage within the next century. The report calls for urgent global cooperation to mitigate these effects.",
+        image: "https://via.placeholder.com/400x200"
+    },
+    // You can add more stories here
+];
+
+// Function to display all stories on the homepage
+function displayStories() {
+    const storyListContainer = document.getElementById('story-list');
+
+    stories.forEach(story => {
+        // Create the elements for the story card
+        const storyCard = document.createElement('div');
+        storyCard.classList.add('story-card');
+
+        const storyTitle = document.createElement('h2');
+        storyTitle.textContent = story.title;
+
+        const storyExcerpt = document.createElement('p');
+        storyExcerpt.textContent = story.excerpt;
+
+        const storyLink = document.createElement('a');
+        storyLink.href = `story.html?id=${story.id}`; // We'll create story.html next
+        storyLink.textContent = "Read more";
+
+        // Append the elements to the story card
+        storyCard.appendChild(storyTitle);
+        storyCard.appendChild(storyExcerpt);
+        storyCard.appendChild(storyLink);
+
+        // Add the story card to the main container
+        storyListContainer.appendChild(storyCard);
+    });
+}
+
+// Call the function to display the stories when the page loads
+displayStories();
+
+// Note: The image property in the story object is not being used in this version,
+// but it is a good practice to include it for future updates. We can add images
+// to the story cards later.
