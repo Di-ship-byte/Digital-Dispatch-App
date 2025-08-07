@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journalism Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>The Daily Byte</h1>
+        <p>Your source for the latest stories.</p>
+    </header>
+
+    <main id="story-list">
+        </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
