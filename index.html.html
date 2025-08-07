@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Journalism App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>My Journalism App</h1>
+    </header>
+
+    <main>
+        <section class="add-story-section">
+            <h2>Add New Story</h2>
+            <form id="add-story-form">
+                <div class="form-group">
+                    <label for="story-title">Story Title:</label>
+                    <input type="text" id="story-title" name="story-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="story-content">Story Content:</label>
+                    <textarea id="story-content" name="story-content" rows="10" required></textarea>
+                </div>
+                <button type="submit">Publish Story</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <section class="story-list-section">
+            <h2>Published Stories</h2>
+            <ul id="stories-list">
+                </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 My Journalism App</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
